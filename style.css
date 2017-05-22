@@ -1,0 +1,29 @@
+body {
+
+	font-family: 'Poppins', sans-serif; ;
+
+}
+
+nav {
+
+	height:50px;
+	width: 100vw;
+	text-align: center;
+}
+
+#outsideLayer {
+
+	margin:auto;
+	height: 100vw;
+	width: 100vw;
+	background-color: pink;
+}
+
+#middleBorder {
+
+	margin:auto;
+	height:750px;
+	width: 950px;
+	background-color: orange;
+}
+
