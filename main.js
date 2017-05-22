@@ -8,6 +8,23 @@ $(function () {
 
 function gameInit () {
 
+	var mugs = ["#middleLeftDiv", "#middleRightDiv"];
+
+	$.each(mugs, function(i, name) {
+
+		$(name).click(function(event) {
+
+			console.log(name + " has been clicked");
+		})
+
+	})
+
+
+
+
+
+	//end of clicks initiation
+
 	//event.target is where the mouse has clicked.
 	
 
