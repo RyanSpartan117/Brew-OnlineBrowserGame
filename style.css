@@ -25,5 +25,29 @@ nav {
 	height:750px;
 	width: 950px;
 	background-color: orange;
+	text-align:center;
 }
 
+#middleLeftDiv {
+
+	height: 300px;
+	width:150px;
+	background-color: black;
+	margin-right: 150px;
+	
+	margin-top: 40px;
+	display: inline-block;
+
+}
+
+#middleRightDiv {
+
+	height: 300px;
+	width:150px;
+	background-color: black;
+	margin-left: 150px;
+	
+	margin-top: 40px;
+	display:inline-block;
+
+}
