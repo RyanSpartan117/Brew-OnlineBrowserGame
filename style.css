@@ -19,6 +19,31 @@ nav {
 	background-color: pink;
 }
 
+#scores {
+
+	height:50px;
+	width:100%;
+	background-color:green;
+	opacity:0.6;
+	display:block;
+}
+
+#scores div {
+
+	margin:auto;
+	margin-top:13px;
+	font-size: 16px;
+	height:100%;
+	width:46%;
+	background-color: yellow;
+	display:inline-block;
+}
+
+.scoreCounter {
+
+	display:inline;
+}
+
 #middleBorder {
 
 	margin:auto;
