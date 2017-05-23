@@ -25,6 +25,7 @@ function gameInit () {
 		reset();
 		keyPresses();
 		$(startButton).hide();
+		
 		setTimeout(function() {
 			$(startButton).show();
 		}, 6000);

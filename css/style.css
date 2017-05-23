@@ -10,6 +10,10 @@ nav {
 	width: 100vw;
 	text-align: center;
 }
+nav h1 {
+
+	font-size: 30px;
+}
 
 #outsideLayer {
 
@@ -130,7 +134,6 @@ nav {
 	height: 200px;
 	width:220px;
 	background-color: black;
-	/*margin-right: 150px;*/
 	margin-top: 40px;
 	display: inline-block;
 }
