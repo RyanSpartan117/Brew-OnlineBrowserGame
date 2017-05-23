@@ -1,11 +1,7 @@
 var isGameRunning = true;
 var mugs = ["#middleLeftDiv", "#middleRightDiv"];
 
-$(function () {
-
-	gameInit();
-
-}) //end of start function.
+$(() => gameInit()); //end of start function.
 
 
 
@@ -15,18 +11,23 @@ function gameInit () {
 	var down = false;
 
 
-	$(startButton).click(function(e) {
+	$(startButton).on("click", function(e) {
 
+		
 		console.log("startbutton");
 
-		$(mugs[0]).html(0);
-		$(mugs[1]).html(0);
+		
+		
 		$(mugs[0]).removeClass('leftDip');
 		$(mugs[1]).removeClass('rightDip');
 
 
-		start();
+		reset();
 		keyPresses();
+		$(startButton).hide();
+		setTimeout(function() {
+			$(startButton).show();
+		}, 6000);
 
 	})
 
@@ -35,10 +36,12 @@ function gameInit () {
 function keyPresses () {
 	
 
+	
+
 
 
 	var scoreSide = ["#leftScore", "#rightScore"];
-	$(document).keyup(function(e) {
+	$(document).on("keyup", (e) => {
 
 		if(!isGameRunning) {
 
@@ -69,7 +72,7 @@ function keyPresses () {
 
 	})
 
-	$(document).keydown(function(e) {
+	$(document).on("keydown" ,function(e) {
 
 		if(!isGameRunning) {
 
@@ -101,8 +104,8 @@ function keyPresses () {
 function keyPressCounter(side) {
 
 	var counter = $(side).html();
-	int = parseInt(counter);
-	int ++;
+	var int = parseInt(counter);
+	int = int + 1;
 	$(side).html(int);
 	return int;
 }
@@ -123,6 +126,7 @@ function timer (time) {
 			console.log("stop");
 			clearInterval(interval);
 			stop();
+			winner();
 
 		} else {
 
@@ -134,18 +138,99 @@ function timer (time) {
 	}, 1000);
 }
 
-function start () {
+function winner() {
 
+	var left = $("#leftScore").html();
+	
+	var right = $("#rightScore").html();
+
+	if(left === right) {
+
+		alert("it's a draw!");
+
+	} else if( left > right){
+
+		alert("player 1 wins!");
+	} else { 
+
+		alert("player 2 wins!");
+	}
+}
+
+
+
+function reset() {
 
 	isGameRunning = true;
+	resetScores();
 	timer(6);
 
+}
+
+function resetScores() {
+
+	var left = $("#leftScore").html(0);
+	var right = $("#rightScore").html(0);
 }
 
 
 
 function stop () {
 
+	$(document).off();
 	isGameRunning = false;
 
 }
+
+
+// class Game {
+// 	constructor(width) {
+// 		this.width = width;
+// 		this.isGameRunning = false;
+// 	}
+
+// 	resetScores() {
+// 		console.log("In all my logic, the board width is " + this.width);
+// 		$("#leftScore").on("click", () => {
+// 			this.isGameRunning = true;
+// 			console.log(this)
+// 		});
+// 	}
+// }
+
+// let game = new Game(3);
+// game.board = new Board(4);
+
+
+
+// console.log(game)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
