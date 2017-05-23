@@ -37,6 +37,7 @@ nav {
 	width:46%;
 	background-color: yellow;
 	display:inline-block;
+
 }
 
 .scoreCounter {
@@ -58,11 +59,26 @@ nav {
 	height: 300px;
 	width:150px;
 	background-color: black;
-	margin-right: 150px;
+	margin-right: 100px;
 	
 	margin-top: 40px;
 	display: inline-block;
 
+}
+
+#timer {
+	height:40px;
+	width:60px;
+	border: dashed black 3px;
+	font-size: 20px;
+	margin-top: 70px;	
+	vertical-align: top;
+	display:inline-block;
+}
+
+#timer p {
+
+	transform: translateY(10px);
 }
 
 #middleRightDiv {
@@ -70,7 +86,7 @@ nav {
 	height: 300px;
 	width:150px;
 	background-color: black;
-	margin-left: 150px;
+	margin-left: 100px;
 	
 	margin-top: 40px;
 	display:inline-block;

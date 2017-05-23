@@ -1,54 +1,34 @@
+var isGameRunning = true;
+
 $(function () {
 
 	gameInit();
-}) //end of start function.
 
+}) //end of start function.
 
 
 
 function gameInit () {
 
-
-	// $.each(mugs, function(i, name) {
-
-	// 	$(name).keydown(function(e) {
-
-	// 		if(e.which == 65) {
-
-	// 			console.log(name);
-	// 		} else if (e.which == 76) {
-
-	// 			console.log(name);
-
-
-	// 		}
-
-
-
-	// 		//event.target is where the mouse has clicked.
-	// 	})
-
-	// }) //end of .each	
-	
-
-
 	var mugs = ["#middleLeftDiv", "#middleRightDiv"];
 	var scoreSide = ["#leftScore", "#rightScore"];
 	var down = false;
 
+	if(!isGameRunning)
 	$(document).keyup(function(e) {
 
 		if(e.which == 65) {
+			//a key
 
 			down = false;
 
-			console.log("up");
 			keyPressCounter(scoreSide[0]);
 
 			$(mugs[0]).addClass('middleLeftDiv');
 			$(mugs[0]).removeClass('leftDip');
 
 		} else if (e.which == 76) {
+			//l key
 
 			keyPressCounter(scoreSide[1]);
 
@@ -62,11 +42,11 @@ function gameInit () {
 	})
 
 	$(document).keydown(function(e) {
+
 	    if(e.which == 65) {
 
 	    	down = true;
 	    		//a key
-	    	console.log("down");
 
 	    	$(mugs[0]).addClass('leftDip');
 	    	$(mugs[0]).removeClass('middleLeftDiv');
@@ -83,8 +63,8 @@ function gameInit () {
 
 
 }
-function keyPressCounter(side) {
 
+function keyPressCounter(side) {
 
 	var counter = $(side).html();
 	int = parseInt(counter);
@@ -93,3 +73,41 @@ function keyPressCounter(side) {
 	return int;
 }
 
+
+function timer (time) {
+
+
+	loopTime = time;
+
+	console.log("intTime: " + time);
+
+	var interval = setInterval(function() {
+
+		if(loopTime === 0) {
+
+			console.log("stop");
+			clearInterval(interval);
+			stop();
+		} else {
+
+			
+			loopTime--;
+			$("#time").html(loopTime);
+
+		}
+	}, 1000);
+}
+
+function start () {
+
+	isGameRunning = true;
+
+}
+
+
+
+function stop () {
+
+	isGameRunning = false;
+
+}
