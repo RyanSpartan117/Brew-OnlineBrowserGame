@@ -67,9 +67,20 @@ nav {
 }
 
 #timer {
+
 	height:40px;
 	width:60px;
 	border: dashed black 3px;
+	font-size: 20px;
+	margin-top: 70px;	
+	vertical-align: top;
+	display:inline-block;
+}
+
+#start {
+
+	height:40px;
+	width:60px;
 	font-size: 20px;
 	margin-top: 70px;	
 	vertical-align: top;
