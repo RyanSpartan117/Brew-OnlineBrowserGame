@@ -8,24 +8,81 @@ $(function () {
 
 function gameInit () {
 
+
+	// $.each(mugs, function(i, name) {
+
+	// 	$(name).keydown(function(e) {
+
+	// 		if(e.which == 65) {
+
+	// 			console.log(name);
+	// 		} else if (e.which == 76) {
+
+	// 			console.log(name);
+
+
+	// 		}
+
+
+
+	// 		//event.target is where the mouse has clicked.
+	// 	})
+
+	// }) //end of .each	
+	
+
+
 	var mugs = ["#middleLeftDiv", "#middleRightDiv"];
 	var scoreSide = ["#leftScore", "#rightScore"];
+	var down = false;
 
-	$.each(mugs, function(i, name) {
+	$(document).keyup(function(e) {
 
-		$(name).click(function(event) {
+		if(e.which == 65) {
 
-			console.log(name + " has been clicked");
+			down = false;
 
-			keyPressCounter(scoreSide[i]);
-			console.log(scoreSide[i])
-			//event.target is where the mouse has clicked.
-		})
+			console.log("up");
+			keyPressCounter(scoreSide[0]);
 
-	})//end of clicks initiation
+			$(mugs[0]).addClass('middleLeftDiv');
+			$(mugs[0]).removeClass('leftDip');
 
-}//end of game initiation function
+		} else if (e.which == 76) {
 
+			keyPressCounter(scoreSide[1]);
+
+
+
+			$(mugs[1]).addClass('middleRightDiv');
+			$(mugs[1]).removeClass('rightDip');
+		}
+
+
+	})
+
+	$(document).keydown(function(e) {
+	    if(e.which == 65) {
+
+	    	down = true;
+	    		//a key
+	    	console.log("down");
+
+	    	$(mugs[0]).addClass('leftDip');
+	    	$(mugs[0]).removeClass('middleLeftDiv');
+	
+
+	    } else if (e.which == 76) {
+	    		//l key
+
+			$(mugs[1]).addClass('rightDip');
+			$(mugs[1]).removeClass('middleRightDiv');
+	    }
+	})
+
+
+
+}
 function keyPressCounter(side) {
 
 
@@ -34,6 +91,5 @@ function keyPressCounter(side) {
 	int ++;
 	$(side).html(int);
 	return int;
-
 }
 

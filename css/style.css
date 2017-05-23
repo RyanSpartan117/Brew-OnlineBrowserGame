@@ -114,7 +114,7 @@ nav {
 	width:150px;
 	background-color: black;
 	margin-right: 150px;
-	margin-bottom: -250px;
+	transform: translateY(250px);
 	display: inline-block;
 
 
@@ -127,7 +127,7 @@ nav {
 	width:150px;
 	background-color: black;
 	margin-left: 150px;
-	margin-bottom: -250px;
+	transform: translateY(250px);
 	display: inline-block;
 
 
