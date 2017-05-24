@@ -47,6 +47,17 @@ nav h1 {
 .scoreCounter {
 
 	display:inline;
+	font-size: 30px;
+}
+
+#leftScore {
+
+	font-size: 30px;
+}
+
+#rightScore {
+	font-size: 30px;
+
 }
 
 #middleBorder {

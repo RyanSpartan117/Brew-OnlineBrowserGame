@@ -1,4 +1,32 @@
-# Brew
+## Brew
+
+Race your friend in a teabag dip-off.
+
+##Getting Started
+
+With SSH:
+
+paste the following code into your terminal into your chosen folder:
+
+```
+git@github.com:RyanSpartan117/onlineGame.git
+```
+
+with https paste the following into your browser, download the ZIP from the green button on the right of the page and then unzip into your chosen folder.
+
+```
+https://github.com/RyanSpartan117/onlineGame.git
+```
+
+
+## Running the game
+
+Once you've unzipped the file, open it up in a text editor of your choice. Right click on the index.html file and choose the "open in browser" option.
+
+
+
+
+
 
 ### Pseudo-Code
 ```
