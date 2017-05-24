@@ -73,7 +73,10 @@ nav h1 {
 
 	height: 300px;
 	width:150px;
-	background-color: black;
+	background-image: url("../images/cookie.png");
+	background-repeat: no-repeat;
+
+	/*background-color: black;*/
 	margin-right: 100px;
 	
 	margin-top: 40px;
@@ -112,9 +115,12 @@ nav h1 {
 
 	height: 300px;
 	width:150px;
-	background-color: black;
+
+	background-image: url("../images/cookie.png");
+	background-repeat: no-repeat;
+	/*background-color: black;*/
+
 	margin-left: 100px;
-	
 	margin-top: 40px;
 	display:inline-block;
 
@@ -122,6 +128,8 @@ nav h1 {
 
 #mugs {
 
+
+	z-index:1;
 	width:100%;
 	height:150px;
 	display:inline-block;
@@ -132,30 +140,108 @@ nav h1 {
 
 #middleLeftMug {
 
-	height: 200px;
-	width:220px;
-	background-color: black;
-	margin-right: 220px;
+	position: relative;
+	height: 250px;
+	width: 224px;
+	/*background-color: black;*/
+	/*background-image: url("../images/mug-red.png");*/
+	background-size: 100%;
+	background-repeat: no-repeat;
+	/*margin-right: 220px;*/
 	margin-top: 40px;
 	display: inline-block;
+}
+
+#topRed {
+
+	position:absolute;
+	z-index: 1;
+	height:29px;
+	width:100%;
+	background-image: url("../images/topredmug.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+
+
+}
+
+#bottomRed {
+
+	position:absolute;
+	z-index: 3;
+	top:29px;
+	height: 210px;
+	width:100%;
+	background-image: url("../images/bottomredmug.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+
+#mugSeparator {
+
+
+	height:200px;
+	width:250px;
+	display:inline-block;
+
 }
 
 #middleRightMug {
 
-	height: 200px;
-	width:220px;
-	background-color: black;
+
+	position:relative;
+	z-index:2;
+	height: 250px;
+	width: 224px;
+	/*background-color: black;*/
+	/*background-image: url("../images/mug-blue.png");*/
+	background-size: 100%;
+	background-repeat: no-repeat;
 	margin-top: 40px;
+	margin-right:28px;
 	display: inline-block;
 }
 
+#topBlue {
+
+	position:absolute;
+	z-index: 3;
+	height:29px;
+	width:100%;
+	background-image: url("../images/topbluemug.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+
+
+}
+
+#bottomBlue {
+
+	position:absolute;
+	z-index: 1;
+	top:29px;
+	height: 210px;
+	width:100%;
+	background-image: url("../images/bottombluemug.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+
+
+}
+
+
+
 .leftDip {
-	
+
+
+	position:relative;
+	z-index:2;
 	height: 300px;
 	width:150px;
-	background-color: black;
+	/*background-color: black;*/
 	margin-right: 150px;
-	transform: translateY(250px);
+	transform: translateY(340px);
 	display: inline-block;
 
 
@@ -163,12 +249,14 @@ nav h1 {
 
 .rightDip {
 
-
+	position:relative;
+	z-index:2;
 	height: 300px;
 	width:150px;
-	background-color: black;
+	/*background-color: black;*/
 	margin-left: 150px;
-	transform: translateY(250px);
+	transform: translateY(340px);
+	/*transform: translate(20px , 340px);*/
 	display: inline-block;
 
 
