@@ -224,6 +224,7 @@ class Game {
 
 	constructor() {
 		this.isGameRunning = false;
+		this.mugs = ["#middleLeftDiv", "#middleRightDiv"];
 
 
 	}
@@ -232,7 +233,6 @@ class Game {
 
 
 		this.isGameRunning = true;
-		const mugs = ["#middleLeftDiv", "#middleRightDiv"];
 
 		let startButton = $("#start")
 		let down = false;
@@ -245,8 +245,8 @@ class Game {
 
 			
 			
-			$(mugs[0]).removeClass('leftDip');
-			$(mugs[1]).removeClass('rightDip');
+			$(this.mugs[0]).removeClass('leftDip');
+			$(this.mugs[1]).removeClass('rightDip');
 
 			this.reset();
 			this.keyPresses();
@@ -276,21 +276,22 @@ class Game {
 			//a key
 
 			// down = true;
+			
+			$(this.mugs[0]).addClass('middleLeftDiv');
+			$(this.mugs[0]).removeClass('leftDip');
 
 			this.keyPressCounter(scoreSide[0]);
 
-			$(mugs[0]).addClass('middleLeftDiv');
-			$(mugs[0]).removeClass('leftDip');
 
 		} else if (e.which == 76) {
 			//l key
 
+
+			$(this.mugs[1]).addClass('middleRightDiv');
+			$(this.mugs[1]).removeClass('rightDip');	
+
 			this.keyPressCounter(scoreSide[1]);
 
-
-
-			$(mugs[1]).addClass('middleRightDiv');
-			$(mugs[1]).removeClass('rightDip');
 		}
 
 
@@ -298,7 +299,6 @@ class Game {
 
 	$(document).on("keydown" ,function(e) {
 
-		console.log("keydown" + this);
 
 		if(this.isGameRunning === false) {
 
@@ -306,19 +306,18 @@ class Game {
 			}
 	    if(e.which == 65) {
 
-	    	console.log("a press " + this);
 	    	// down = true;
 	    		//a key
 
-	    	$(mugs[0]).addClass('leftDip');
-	    	$(mugs[0]).removeClass('middleLeftDiv');
+	    	$(this.mugs[0]).addClass('leftDip');
+	    	$(this.mugs[0]).removeClass('middleLeftDiv');
 	
 
 	    } else if (e.which == 76) {
 	    		//l key
 
-			$(mugs[1]).addClass('rightDip');
-			$(mugs[1]).removeClass('middleRightDiv');
+			$(this.mugs[1]).addClass('rightDip');
+			$(this.mugs[1]).removeClass('middleRightDiv');
 	    }
 	}.bind(this))
 
@@ -360,7 +359,7 @@ class Game {
 				$("#time").html(this.loopTime);
 
 			}
-		}.bind(this)	, 1000);
+		}.bind(this), 1000);
 	}
 
 	winner() {
