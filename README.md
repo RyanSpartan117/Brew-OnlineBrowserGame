@@ -9,7 +9,7 @@ With SSH:
 paste the following code into your terminal into your chosen folder:
 
 ```
-git@github.com:RyanSpartan117/onlineGame.git
+git clone git@github.com:RyanSpartan117/onlineGame.git
 ```
 
 with https paste the following into your browser, download the ZIP from the green button on the right of the page and then unzip into your chosen folder.
