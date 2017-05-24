@@ -65,7 +65,8 @@ nav h1 {
 	margin:auto;
 	height:750px;
 	width: 950px;
-	background-color: orange;
+	border: black solid 3px;
+	background: linear-gradient(#EEEEEE, #DDDDDD);
 	text-align:center;	
 }
 
@@ -135,6 +136,7 @@ nav h1 {
 	display:inline-block;
 	margin:auto;
 	margin-top: 50px;
+	margin-left: 4px;
 
 }
 
@@ -169,7 +171,7 @@ nav h1 {
 
 	position:absolute;
 	z-index: 3;
-	top:29px;
+	top:21px;
 	height: 210px;
 	width:100%;
 	background-image: url("../images/bottomredmug.png");
@@ -191,7 +193,6 @@ nav h1 {
 
 
 	position:relative;
-	z-index:2;
 	height: 250px;
 	width: 224px;
 	/*background-color: black;*/
@@ -206,7 +207,7 @@ nav h1 {
 #topBlue {
 
 	position:absolute;
-	z-index: 3;
+	z-index: 1;
 	height:29px;
 	width:100%;
 	background-image: url("../images/topbluemug.png");
@@ -219,8 +220,8 @@ nav h1 {
 #bottomBlue {
 
 	position:absolute;
-	z-index: 1;
-	top:29px;
+	z-index: 3;
+	top:21px;
 	height: 210px;
 	width:100%;
 	background-image: url("../images/bottombluemug.png");
