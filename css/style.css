@@ -50,13 +50,19 @@ nav h1 {
 	font-size: 30px;
 }
 
+.player { 
+
+	text-decoration: underline;
+ }
 #leftScore {
 
 	font-size: 30px;
+	text-decoration: bold;
 }
 
 #rightScore {
 	font-size: 30px;
+	text-decoration: bold;
 
 }
 
@@ -64,7 +70,7 @@ nav h1 {
 
 	margin:auto;
 	height:750px;
-	width: 950px;
+	width: 80%;
 	border: black solid 3px;
 	background: linear-gradient(#EEEEEE, #DDDDDD);
 	text-align:center;	
@@ -72,7 +78,7 @@ nav h1 {
 
 #middleLeftDiv {
 
-	height: 300px;
+	height: 150px;
 	width:150px;
 	background-image: url("../images/cookie.png");
 	background-repeat: no-repeat;
@@ -112,9 +118,10 @@ nav h1 {
 	transform: translateY(10px);
 }
 
+
 #middleRightDiv {
 
-	height: 300px;
+	height: 150px;
 	width:150px;
 
 	background-image: url("../images/cookie.png");
@@ -135,8 +142,8 @@ nav h1 {
 	height:150px;
 	display:inline-block;
 	margin:auto;
-	margin-top: 50px;
 	margin-left: 4px;
+	margin-top: 30px;
 
 }
 
@@ -242,7 +249,7 @@ nav h1 {
 	width:150px;
 	/*background-color: black;*/
 	margin-right: 150px;
-	transform: translateY(340px);
+	transform: translateY(200px);
 	display: inline-block;
 
 
@@ -256,9 +263,22 @@ nav h1 {
 	width:150px;
 	/*background-color: black;*/
 	margin-left: 150px;
-	transform: translateY(340px);
+	transform: translateY(200px);
 	/*transform: translate(20px , 340px);*/
 	display: inline-block;
 
+
+}
+#desk {
+
+	position:relative;
+	z-index:1;
+	margin:auto;
+	height:250px;
+	width:75%;
+	background-image: url("../images/desk.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transform:translateY(-99px);
 
 }
