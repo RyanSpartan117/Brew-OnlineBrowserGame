@@ -42,6 +42,11 @@ class Game {
 		
 	}
 
+	instructions () {
+
+		$("#instructionModal").	
+	}
+
 	keyPresses () {
 	
 	const scoreSide = ["#leftScore", "#rightScore"];

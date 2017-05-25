@@ -1,6 +1,63 @@
 body {
 
 	font-family: 'Poppins', sans-serif;
+	background-color: pink;
+	overflow:hidden;
+
+}
+
+#instuctionModal {
+
+
+	position:absolute;
+	top:0;
+	left:0;
+	z-index: 399;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.5);
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	display:none;
+
+}
+
+#instructions {
+
+	
+	z-index: 400;
+	height: 600px;
+	width: 60%;
+	background-color: rgba(255, 192, 203, 1);
+	margin:auto;
+	border: black solid 3px;
+	border-radius: 10%;
+	
+
+}
+
+#instructions h2 {
+
+	margin-top: 30px;
+}
+#instructions h2, h3 {
+
+	font-size: 45px;
+	text-align:center;
+}
+
+#instructions h3 {
+
+	margin-top: 20px;
+
+}
+
+#instructions p, ul {
+
+	font-size: 30px;
+	text-align: center;
+	margin: 20px 40px 0px;
 
 }
 
@@ -9,16 +66,17 @@ nav {
 	height:50px;
 	width: 100vw;
 	text-align: center;
+	background-color: pink;
 }
 nav h1 {
 
-	font-size: 30px;
+	font-size: 40px;
 }
 
 #outsideLayer {
 
 	margin:auto;
-	height: 100vw;
+	height: 100vh;
 	width: 100vw;
 	background-color: pink;
 }
@@ -32,12 +90,44 @@ nav h1 {
 	display:block;
 }
 
+#navBar {
+
+	height: 40px;
+	width:100%;
+	margin-top: 13px;
+
+}
+
+#buttons {
+
+	height: 35px;
+	width: 30%;
+	margin-top: 5px;
+	margin-left:auto;
+	margin-right:15px;
+}
+
+#buttons p {
+
+	margin-top: 5px;
+
+} 
+
+#instructionButton, #leaderboardButton {
+
+	border: black solid 1px;
+	border-radius: 6px;
+	height: 30px;
+	width: 48%;
+	display: inline-block;
+}
+
 #scores div {
 
 	margin:auto;
 	margin-top:13px;
 	font-size: 16px;
-	height:100%;
+	height:73%;
 	width:46%;
 	background-color: yellow;
 	display:inline-block;
@@ -82,10 +172,7 @@ nav h1 {
 	width:150px;
 	background-image: url("../images/cookie.png");
 	background-repeat: no-repeat;
-
-	/*background-color: black;*/
 	margin-right: 100px;
-	
 	margin-top: 40px;
 	display: inline-block;
 
@@ -126,8 +213,6 @@ nav h1 {
 
 	background-image: url("../images/cookie.png");
 	background-repeat: no-repeat;
-	/*background-color: black;*/
-
 	margin-left: 100px;
 	margin-top: 40px;
 	display:inline-block;
@@ -152,11 +237,8 @@ nav h1 {
 	position: relative;
 	height: 250px;
 	width: 224px;
-	/*background-color: black;*/
-	/*background-image: url("../images/mug-red.png");*/
 	background-size: 100%;
 	background-repeat: no-repeat;
-	/*margin-right: 220px;*/
 	margin-top: 40px;
 	display: inline-block;
 }
@@ -202,8 +284,6 @@ nav h1 {
 	position:relative;
 	height: 250px;
 	width: 224px;
-	/*background-color: black;*/
-	/*background-image: url("../images/mug-blue.png");*/
 	background-size: 100%;
 	background-repeat: no-repeat;
 	margin-top: 40px;
@@ -247,7 +327,6 @@ nav h1 {
 	z-index:2;
 	height: 300px;
 	width:150px;
-	/*background-color: black;*/
 	margin-right: 150px;
 	transform: translateY(200px);
 	display: inline-block;
@@ -261,10 +340,8 @@ nav h1 {
 	z-index:2;
 	height: 300px;
 	width:150px;
-	/*background-color: black;*/
 	margin-left: 150px;
 	transform: translateY(200px);
-	/*transform: translate(20px , 340px);*/
 	display: inline-block;
 
 
@@ -280,5 +357,16 @@ nav h1 {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	transform:translateY(-99px);
+
+}
+
+#leaderboards {
+
+	height: 600px;
+	width: 80%;
+	background-color: white;
+	border: black solid 3px;
+	margin:auto;
+
 
 }
