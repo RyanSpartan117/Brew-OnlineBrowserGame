@@ -183,14 +183,14 @@ class Game {
 
 		let left = $("#leftScore").html();
 		let right = $("#rightScore").html();
-		let p1 = $("#Player1name").html();
-		let p2 = $("#Player2name").html();
+		// let p1 = $("#Player1name").html();
+		// let p2 = $("#Player2name").html();
 
 
 		if(left === right) {
 
-			this.leaderboardHandler(left);
-			this.leaderboardHandler(right);
+			// this.leaderboardHandler(left);
+			// this.leaderboardHandler(right);
 
 			
 			$("#displayWinner").html("It's a draw");
@@ -199,13 +199,13 @@ class Game {
 
 
 			$("#displayWinner").html(p1 + " wins!");
-			this.leaderboardHandler(left + " wins!");
+			// this.leaderboardHandler(left);
 
 		} else { 
 
 
-			$("#displayWinner").html(p2);
-			this.leaderboardHandler(right);
+			$("#displayWinner").html(p2 + " wins!");
+			// this.leaderboardHandler(right);
 
 		}
 	}//end of winner
@@ -218,7 +218,6 @@ class Game {
 
 		console.log(this.leaderboardArray);
 		return this.leaderboardArray;
-
 
 	}
 
