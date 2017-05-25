@@ -198,8 +198,8 @@ class Game {
 		} else if( left > right){
 
 
-			$("#displayWinner").html(p1);
-			this.leaderboardHandler(left);
+			$("#displayWinner").html(p1 + " wins!");
+			this.leaderboardHandler(left + " wins!");
 
 		} else { 
 
