@@ -12,14 +12,18 @@ function init () {
 class Game {
 
 	constructor() {
+
 		this.isGameRunning = false;
 		this.mugs = ["#middleLeftDiv", "#middleRightDiv"];
+		this.leaderboardArray = [0, 0, 0, 0, 0];
 
 	}
 
 	gameInit () {
 
 		this.isGameRunning = true;
+		this.instructions();
+		this.buttonEvents();
 
 		let startButton = $("#start");
 
@@ -34,7 +38,7 @@ class Game {
 			$(startButton).hide();
 
 			setTimeout(function() {
-				$(startButton).show();
+			$(startButton).show();
 			}, 6000);
 
 		}.bind(this));
@@ -47,9 +51,37 @@ class Game {
 
 		closeButton.click( function(e) {
 
+			console.log("close clicked");
+			$("#instructionModal").hide();
 
 		})
 	}//end of instructions
+
+	buttonEvents () {
+
+		let instructionButton = $("#instructionButton");
+		let leaderboardButton = $("#leaderboardButton");
+
+		instructionButton.click( function(e){
+
+			console.log("instruction button clicked");
+			$("#instructionModal").show();
+		})
+
+		let formButton = $("#formButton");
+
+		formButton.click( function(e){
+
+			console.log("form button clicked");
+			let currentName = $("#formName").val();
+			console.log(currentName);
+			$("#Player1name").html(currentName);
+
+
+
+		})
+
+	}//end of buttonEvents
 
 	keyPresses () {
 	
@@ -115,6 +147,7 @@ class Game {
 			int = int + 1;
 			$(side).html(int);
 			return int;
+
 		}
 
 	timer (time) {
@@ -144,18 +177,37 @@ class Game {
 		let left = $("#leftScore").html();
 		let right = $("#rightScore").html();
 
+
 		if(left === right) {
+
+			this.leaderboardHandler(left);
+			this.leaderboardHandler(right);
 
 			alert("it's a draw!");
 
 		} else if( left > right){
 
+			this.leaderboardHandler(left)
+
 			alert("player 1 wins!");
 		} else { 
 
+			this.leaderboardHandler(right)
 			alert("player 2 wins!");
 		}
 	}//end of winner
+
+	leaderboardHandler (winningNumber) {
+
+		this.leaderboardArray.push(winningNumber);
+		this.leaderboardArray.sort(function(a,b){return b-a});
+		this.leaderboardArray.pop();
+
+		console.log(this.leaderboardArray);
+		return this.leaderboardArray;
+
+
+	}
 
 	reset() {
 		this.isGameRunning = true;	

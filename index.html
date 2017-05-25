@@ -19,7 +19,7 @@
 		<h1>Brew</h1>
 
 	</nav>
-	<section id = "instuctionModal">
+	<section id = "instructionModal">
 		<section id="instructions">
 			<h2>Instructions</h2>
 
@@ -37,15 +37,33 @@
 				<li>Player 1: <span class="key">A</span> key</li>
 				<li>Player 2: <span class= "key">L</span> key</li>
 			</ul>
+
+			<form id = "player1">
+				<input type = "text" id= "formName" value="test">
+				<input type = "button" id = "formButton">
+					
+				</button>
+			</form>		
 			
 			<div id="closeButton">
 					
-					<span id = "closeText"> Lets go!</span>
+				<span id = "closeText"> Lets go!</span>
 
 			</div>
 
 
 		</section>
+
+	</section>
+
+	<section id = "leaderboardModal">
+		<section id="leaderboard">
+			
+
+		</section>
+			
+
+
 	</section>
 	<main>
 	<section id = "outsideLayer">
@@ -54,17 +72,24 @@
 			<section id="scores">
 				<div>
 	 
-					<p  class = "scoreCounter"> <span class = "player">Player 1 :</span>      <span id="leftScore">0</span> </p>
+					<p  class = "scoreCounter"> 
+						<span class = "player" id="Player1name">Player 1 </span>  :    
+						<span id="leftScore">0</span> </p>
 				</div>
 					
 
 				<div>
-					<p  class= "scoreCounter"> <span id = "rightScore">0    </span> <span class = "player"> : Player 2</span> </p>
+					<p  class= "scoreCounter"> <span id = "rightScore">0    </span> : 
+					<span class = "player" id="Player2name"> Player 2</span> </p>
 
 				</div>
 			</section>
 
 			<section id = "navBar"> 
+				<section id = "displayWinner">
+					
+
+				</section>
 				<section id="buttons">
 					<div id = "instructionButton">
 
@@ -119,13 +144,6 @@
 
 			</section>
 		</section>
-
-		<section id = "leaderboards">
-			
-
-
-		</section>
-
 		
 	</section>
 
