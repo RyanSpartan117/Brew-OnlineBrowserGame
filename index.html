@@ -4,7 +4,6 @@
 	<title>Brew</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
 
 	<script
     src="https://code.jquery.com/jquery-3.2.1.js"
@@ -38,13 +37,24 @@
 				<li>Player 2: <span class= "key">L</span> key</li>
 			</ul>
 
-			<form id = "player1">
-				<input type = "text" id= "formName" value="test">
-				<input type = "button" id = "formButton">
-					
-				</button>
-			</form>		
-			
+			<section id = playerSelect>
+
+				<form class = "playerid" id = "player1">
+
+					<input type = "text" id= "formName" value="player 1">
+					<input type = "button" id = "formButton" value = "enter">
+						
+					</button>
+
+				</form>		
+				<form class = "playerid" id = "player2">
+					<input type = "text" id= "formNamep2" value="player 2">
+					<input type = "button" id = "formButtonp2" value = "enter" >
+						
+					</button>
+				</form>
+			</section>	
+
 			<div id="closeButton">
 					
 				<span id = "closeText"> Lets go!</span>
@@ -86,11 +96,12 @@
 			</section>
 
 			<section id = "navBar"> 
-				<section id = "displayWinner">
-					
-
-				</section>
+				
 				<section id="buttons">
+					<section id = "displayWinner">
+						<p> &nbsp; </p>
+
+					</section>
 					<div id = "instructionButton">
 
 						<p>Instructions</p>

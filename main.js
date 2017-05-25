@@ -51,7 +51,6 @@ class Game {
 
 		closeButton.click( function(e) {
 
-			console.log("close clicked");
 			$("#instructionModal").hide();
 
 		})
@@ -61,21 +60,29 @@ class Game {
 
 		let instructionButton = $("#instructionButton");
 		let leaderboardButton = $("#leaderboardButton");
+		let formButton = $("#formButton");
+		let formButtonp2 = $("#formButtonp2");
 
 		instructionButton.click( function(e){
 
-			console.log("instruction button clicked");
 			$("#instructionModal").show();
 		})
 
-		let formButton = $("#formButton");
+		
 
 		formButton.click( function(e){
 
-			console.log("form button clicked");
-			let currentName = $("#formName").val();
-			console.log(currentName);
-			$("#Player1name").html(currentName);
+			let leftName = $("#formName").val();
+			$("#Player1name").html(leftName);
+
+
+
+		})
+
+		formButtonp2.click( function(e){
+
+			let rightName = $("#formNamep2").val();
+			$("#Player2name").html(rightName);
 
 
 
@@ -176,6 +183,8 @@ class Game {
 
 		let left = $("#leftScore").html();
 		let right = $("#rightScore").html();
+		let p1 = $("#Player1name").html();
+		let p2 = $("#Player2name").html();
 
 
 		if(left === right) {
@@ -183,17 +192,21 @@ class Game {
 			this.leaderboardHandler(left);
 			this.leaderboardHandler(right);
 
-			alert("it's a draw!");
+			
+			$("#displayWinner").html("It's a draw");
 
 		} else if( left > right){
 
-			this.leaderboardHandler(left)
 
-			alert("player 1 wins!");
+			$("#displayWinner").html(p1);
+			this.leaderboardHandler(left);
+
 		} else { 
 
-			this.leaderboardHandler(right)
-			alert("player 2 wins!");
+
+			$("#displayWinner").html(p2);
+			this.leaderboardHandler(right);
+
 		}
 	}//end of winner
 

@@ -19,7 +19,44 @@ body {
 	display:flex;
 	justify-content: center;
 	align-items: center;
+	/*display:none;*/
 
+}
+
+.playerid {
+
+	display:inline-block;
+}
+
+#playerSelect {
+
+
+	height: 30px;
+	width:100%;
+	margin: auto;
+	margin-top: 25px;
+	text-align:center;
+
+}
+
+#formName, #formNamep2 {
+
+	height: 25px;
+	width: 150px;
+	font-size: 20px;
+}
+#formButton, #formButtonp2 {
+
+	height: 25px;
+	width: 45px;
+
+}
+
+
+#player1 {
+
+	margin-left:auto;
+	margin-right:0;
 }
 
 #leaderboardModal {
@@ -90,11 +127,12 @@ body {
 
 	height:20px;
 	width: 75px;
-	border: black dashed 2px;
+	border: black solid 1px;
 	border-radius:5px;
 	margin:auto;
-	margin-top: 80px;
+	margin-top: 50px;
 	text-align: center;
+	background-color: #E75480;
 
 }
 
@@ -149,10 +187,11 @@ nav h1 {
 #buttons {
 
 	height: 35px;
-	width: 30%;
+	width: 50%;
 	margin-top: 5px;
 	margin-left:auto;
-	margin-right:15px;
+	margin-right: 0px;
+	display:inline-block;
 }
 
 #buttons p {
@@ -161,13 +200,27 @@ nav h1 {
 
 } 
 
+ #displayWinner {
+
+	border-radius: 6px;
+	height: 30px;
+	width: 30%;
+	display: inline-block;
+	margin-left: 0px;
+	font-size: 18px;
+	overflow: hidden;
+
+
+ }
+
 #instructionButton, #leaderboardButton {
 
 	border: black solid 1px;
 	border-radius: 6px;
 	height: 30px;
-	width: 48%;
+	width: 30%;
 	display: inline-block;
+
 }
 
 #scores div {
