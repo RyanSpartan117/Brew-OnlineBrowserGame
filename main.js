@@ -183,8 +183,8 @@ class Game {
 
 		let left = $("#leftScore").html();
 		let right = $("#rightScore").html();
-		// let p1 = $("#Player1name").html();
-		// let p2 = $("#Player2name").html();
+		let p1 = $("#Player1name").html();
+		let p2 = $("#Player2name").html();
 
 
 		if(left === right) {
