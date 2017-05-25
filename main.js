@@ -21,8 +21,7 @@ class Game {
 
 		this.isGameRunning = true;
 
-		let startButton = $("#start")
-		let down = false;
+		let startButton = $("#start");
 
 
 		$(startButton).on("click", function(e) {
@@ -40,12 +39,17 @@ class Game {
 
 		}.bind(this));
 		
-	}
+	}//end of gameInit
 
 	instructions () {
 
-		$("#instructionModal").	
-	}
+		let closeButton = $("#closeButton");
+
+		closeButton.click( function(e) {
+
+
+		})
+	}//end of instructions
 
 	keyPresses () {
 	
@@ -133,7 +137,7 @@ class Game {
 
 			}
 		}.bind(this), 1000);
-	}
+	}//end of keyPressCounter
 
 	winner() {
 
@@ -151,26 +155,27 @@ class Game {
 
 			alert("player 2 wins!");
 		}
-	}
+	}//end of winner
 
 	reset() {
 		this.isGameRunning = true;	
 		this.resetScores();
 		this.timer(6);
 
-	}
+	}//end of reset
 
 	resetScores() {
 
 		let left = $("#leftScore").html(0);
 		let right = $("#rightScore").html(0);
-	}
+
+	}//end of resetScores
 
 	stop () {
 
 		$(document).off();
 		this.isGameRunning = false;
 
-	}
+	}//end of stop
 	
 }
