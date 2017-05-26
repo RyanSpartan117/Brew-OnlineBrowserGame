@@ -207,8 +207,11 @@ nav h1 {
 
 	font-size: 30px;
  }
+#leaderboardButton {
 
-#instructionButton, #leaderboardButton {
+	display:none;
+}
+#instructionButton  {
 
 	border: black solid 1px;
 	border-radius: 6px;
