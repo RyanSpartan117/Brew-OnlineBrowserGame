@@ -5,21 +5,24 @@ function init () {
 
 	let game = new Game();
 
+	//make a new instance of the Game object.
 	game.gameInit();
 
 }
 
-class Game {
+class Game { 
+	// Game object.
 
 	constructor() {
-
-		this.isGameRunning = false;
+		// "global" variables.
+		this.isGameRunning = false; //change the game state to running or not running.
 		this.mugs = ["#middleLeftDiv", "#middleRightDiv"];
-		this.leaderboardArray = [0, 0, 0, 0, 0];
+		// this.leaderboardArray = [0, 0, 0, 0, 0];
 
 	}
 
 	gameInit () {
+		//initialise the game.
 
 		this.isGameRunning = true;
 		this.instructions();
@@ -28,7 +31,8 @@ class Game {
 		let startButton = $("#start");
 
 
-		$(startButton).on("click", function(e) {
+		$(startButton).on("click", function(e) { //start button click event.
+
 
 			$(this.mugs[0]).removeClass('leftDip');
 			$(this.mugs[1]).removeClass('rightDip');
@@ -37,11 +41,11 @@ class Game {
 			this.keyPresses();
 			$(startButton).hide();
 
-			setTimeout(function() {
+			setTimeout(function() { //hide the start button once it's been clicked for 6 seconds.
 			$(startButton).show();
 			}, 6000);
 
-		}.bind(this));
+		}.bind(this)); // make the this inside the click function be the same as the outside this.
 		
 	}//end of gameInit
 
@@ -49,7 +53,7 @@ class Game {
 
 		let closeButton = $("#closeButton");
 
-		closeButton.click( function(e) {
+		closeButton.click( function(e) { //instructions close button click event.
 
 			$("#instructionModal").hide();
 
@@ -57,43 +61,43 @@ class Game {
 	}//end of instructions
 
 	buttonEvents () {
+		//instruction button functionality. Future leaderboard functionality.
 
 		let instructionButton = $("#instructionButton");
 		let leaderboardButton = $("#leaderboardButton");
 		let formButton = $("#formButton");
 		let formButtonp2 = $("#formButtonp2");
 
-		instructionButton.click( function(e){
+		instructionButton.click( function(e){ //instruction button click function.
 
 			$("#instructionModal").show();
+
 		})
 
 		
 
-		formButton.click( function(e){
+		formButton.click( function(e){ //player 1 name button click function.
 
 			let leftName = $("#formName").val();
 			$("#Player1name").html(leftName);
 
-
-
 		})
 
-		formButtonp2.click( function(e){
+		formButtonp2.click( function(e){ //player 2 name button click function.
 
 			let rightName = $("#formNamep2").val();
 			$("#Player2name").html(rightName);
-
-
 
 		})
 
 	}//end of buttonEvents
 
 	keyPresses () {
+		//A and L keyboard events.
 	
 		const scoreSide = ["#leftScore", "#rightScore"];
-		$(document).on("keyup", function(e) {
+
+		$(document).on("keyup", function(e) { //keyup function for both A and L.
 
 			if(this.isGameRunning === false) {
 
@@ -118,9 +122,9 @@ class Game {
 
 			}
 
-		}.bind(this));
+		}.bind(this)); //change this inside the keyup function to be the this in keyPresses.
 
-		$(document).on("keydown" ,function(e) {
+		$(document).on("keydown" ,function(e) { //keydown function for both A and L.
 
 
 			if(this.isGameRunning === false) {
@@ -138,12 +142,13 @@ class Game {
 				$(this.mugs[1]).addClass('rightDip');
 				$(this.mugs[1]).removeClass('middleRightDiv');
 		    }
-		}.bind(this))
+		}.bind(this)) // make the this inside the keydown function be the same as the this in keyPresses.
 
 	}//end of keyPresses ()
 
 	keyPressCounter(side) {
-		
+		//score counter.
+
 			let counter = $(side).html();
 			let int = parseInt(counter);
 			int = int + 1;
@@ -153,30 +158,32 @@ class Game {
 	}//end of keyPressCounter
 
 	timer (time) {
+		//timer method.
 
 		this.isGameRunning = true;
 		this.loopTime = time;
 
-		let interval = setInterval(function() {
+		let interval = setInterval(function() { //timer loop. 
 
 			if(this.loopTime === 1) {
 
-				clearInterval(interval);
+				clearInterval(interval); //stops the loop from continuing once condition is met.
 				this.stop();
 				this.winner();
 
 			} else {
 
 				this.loopTime--;
-				$("#time").html(this.loopTime);
+				$("#time").html(this.loopTime); //Changes the visual timer on the game.
 
 			}
 
-		}.bind(this), 1000);
+		}.bind(this), 1000); //bind this inside the setInterval timer to be the same as the timer this.
 
 	}//end of timer
 
 	winner() {
+		//check to see who won.
 
 		let left = $("#leftScore").html();
 		let right = $("#rightScore").html();
@@ -206,18 +213,21 @@ class Game {
 
 	}//end of winner
 
-	leaderboardHandler (winningNumber) {
+	// leaderboardHandler (winningNumber) {
+	//	//leaderboard function.
 
-		this.leaderboardArray.push(winningNumber);
-		this.leaderboardArray.sort(function(a,b){return b-a});
-		this.leaderboardArray.pop();
+	// 	this.leaderboardArray.push(winningNumber);
+	// 	this.leaderboardArray.sort(function(a,b){return b-a});
+	// 	this.leaderboardArray.pop();
 
-		console.log(this.leaderboardArray);
-		return this.leaderboardArray;
+	// 	console.log(this.leaderboardArray);
+	// 	return this.leaderboardArray;
 
-	}//end of leaderboardHandler
+	// }//end of leaderboardHandler
 
 	reset() {
+		//restart the game.
+
 		this.isGameRunning = true;	
 		this.resetScores();
 		this.timer(6);
@@ -225,13 +235,14 @@ class Game {
 	}//end of reset
 
 	resetScores() {
-
+		//reset the scores to 0.
 		let left = $("#leftScore").html(0);
 		let right = $("#rightScore").html(0);
 
 	}//end of resetScores
 
 	stop () {
+		//stop the game.
 
 		$(document).off();
 		this.isGameRunning = false;
