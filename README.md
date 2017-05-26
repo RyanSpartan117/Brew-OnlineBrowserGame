@@ -1,6 +1,6 @@
 ## Brew
 
-Brew is a  Race your friend in a cookie dip-off.
+Brew is a 1v1 cookie dunking game. Grab a friend and get dunking!
 
 ##Getting Started
 
