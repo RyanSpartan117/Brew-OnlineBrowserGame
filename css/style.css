@@ -19,7 +19,7 @@ body {
 	display:flex;
 	justify-content: center;
 	align-items: center;
-	/*display:none;*/
+	display:none;
 
 }
 
@@ -178,7 +178,7 @@ nav h1 {
 #buttons {
 
 	height: 35px;
-	width: 50%;
+	width: 30%;
 	transform: translateY(-19px);
 	margin-left:auto;
 	margin-right: 0px;
@@ -214,7 +214,7 @@ nav h1 {
 	border: black solid 1px;
 	border-radius: 6px;
 	height: 30px;
-	width: 30%;
+	width: 45%;
 	display: inline-block;
 
 }
@@ -476,3 +476,26 @@ nav h1 {
 
 }
 
+@media (max-width: 980px) {
+
+	body {
+
+		width: 980px;
+	}
+
+	#middleBorder {
+
+		width: 980px;
+	}
+
+	#mugs {
+
+		width:980px;
+	}
+
+	#mugSeparator {
+
+		width:20%;
+	}
+	
+}

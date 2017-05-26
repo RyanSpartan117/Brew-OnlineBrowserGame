@@ -92,58 +92,53 @@ class Game {
 
 	keyPresses () {
 	
-	const scoreSide = ["#leftScore", "#rightScore"];
-	$(document).on("keyup", function(e) {
+		const scoreSide = ["#leftScore", "#rightScore"];
+		$(document).on("keyup", function(e) {
 
-		if(this.isGameRunning === false) {
+			if(this.isGameRunning === false) {
 
-		return;
-		}
-
-		if(e.which == 65) {    // a key
-			
-
-			$(this.mugs[0]).addClass('middleLeftDiv');
-			$(this.mugs[0]).removeClass('leftDip');
-
-			this.keyPressCounter(scoreSide[0]);
-
-
-		} else if (e.which == 76) {    //  l key
-			
-			$(this.mugs[1]).addClass('middleRightDiv');
-			$(this.mugs[1]).removeClass('rightDip');	
-
-			this.keyPressCounter(scoreSide[1]);
-
-		}
-
-	}.bind(this));
-
-	$(document).on("keydown" ,function(e) {
-
-
-		if(this.isGameRunning === false) {
-
-				return;
+			return;
 			}
-	    if(e.which == 65) {
 
-	    	// down = true;
-	    		//a key
+			if(e.which == 65) {    // a key
+				
 
-	    	$(this.mugs[0]).addClass('leftDip');
-	    	$(this.mugs[0]).removeClass('middleLeftDiv');
-	
+				$(this.mugs[0]).addClass('middleLeftDiv');
+				$(this.mugs[0]).removeClass('leftDip');
 
-	    } else if (e.which == 76) {
-	    		//l key
+				this.keyPressCounter(scoreSide[0]);
 
-			$(this.mugs[1]).addClass('rightDip');
-			$(this.mugs[1]).removeClass('middleRightDiv');
-	    }
-	}.bind(this))
 
+			} else if (e.which == 76) {    //  l key
+				
+				$(this.mugs[1]).addClass('middleRightDiv');
+				$(this.mugs[1]).removeClass('rightDip');	
+
+				this.keyPressCounter(scoreSide[1]);
+
+			}
+
+		}.bind(this));
+
+		$(document).on("keydown" ,function(e) {
+
+
+			if(this.isGameRunning === false) {
+
+					return;
+				}
+		    if(e.which == 65) {   //a key	    		
+
+		    	$(this.mugs[0]).addClass('leftDip');
+		    	$(this.mugs[0]).removeClass('middleLeftDiv');
+		
+
+		    } else if (e.which == 76) {    //l key	    		
+
+				$(this.mugs[1]).addClass('rightDip');
+				$(this.mugs[1]).removeClass('middleRightDiv');
+		    }
+		}.bind(this))
 
 	}//end of keyPresses ()
 
@@ -155,7 +150,7 @@ class Game {
 			$(side).html(int);
 			return int;
 
-		}
+	}//end of keyPressCounter
 
 	timer (time) {
 
@@ -176,8 +171,10 @@ class Game {
 				$("#time").html(this.loopTime);
 
 			}
+
 		}.bind(this), 1000);
-	}//end of keyPressCounter
+
+	}//end of timer
 
 	winner() {
 
@@ -191,9 +188,7 @@ class Game {
 
 			// this.leaderboardHandler(left);
 			// this.leaderboardHandler(right);
-
-			
-			$("#displayWinner").html("It's a draw");
+			$("#displayWinner").html("It's a draw!");
 
 		} else if( left > right){
 
@@ -208,6 +203,7 @@ class Game {
 			// this.leaderboardHandler(right);
 
 		}
+
 	}//end of winner
 
 	leaderboardHandler (winningNumber) {
@@ -219,7 +215,7 @@ class Game {
 		console.log(this.leaderboardArray);
 		return this.leaderboardArray;
 
-	}
+	}//end of leaderboardHandler
 
 	reset() {
 		this.isGameRunning = true;	
@@ -242,4 +238,4 @@ class Game {
 
 	}//end of stop
 	
-}
+}//end of Game
