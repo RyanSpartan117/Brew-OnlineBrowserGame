@@ -6,7 +6,7 @@ Brew is a  Race your friend in a cookie dip-off.
 
 With SSH:
 
-paste the following code into your terminal into your chosen folder:
+If you have git already installed on your computer, paste the following code into your terminal into your chosen folder:
 
 ```
 git clone git@github.com:RyanSpartan117/onlineGame.git
