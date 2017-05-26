@@ -178,7 +178,7 @@ nav h1 {
 #buttons {
 
 	height: 35px;
-	width: 30%;
+	width: 45%;
 	transform: translateY(-19px);
 	margin-left:auto;
 	margin-right: 0px;
@@ -193,9 +193,8 @@ nav h1 {
 
  #displayWinner {
 
-	border-radius: 6px;
 	height: 30px;
-	width: 30%;
+	width: 50%;
 	display: inline-block;
 	margin-left: 0px;
 	font-size: 18px;
@@ -497,5 +496,5 @@ nav h1 {
 
 		width:20%;
 	}
-	
+
 }
