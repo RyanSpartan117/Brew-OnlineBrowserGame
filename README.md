@@ -24,6 +24,6 @@ https://github.com/RyanSpartan117/onlineGame.git
 Once you've unzipped the file, open index.html in a text editor of your choice. Right click anywhere on the code and choose the "open in browser" option.
 
 
-###Installation
+### Installation
 
 No installation needed! All you need to have to run the game is an internet connection. 
