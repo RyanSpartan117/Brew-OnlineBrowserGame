@@ -2,7 +2,7 @@
 
 Brew is a 1v1 cookie dunking game. Grab a friend and get dunking!
 
-##Getting Started
+## Getting Started
 
 With SSH:
 
