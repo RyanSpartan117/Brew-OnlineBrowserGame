@@ -26,4 +26,4 @@ Once you've unzipped the file, open index.html in a text editor of your choice. 
 
 ### Installation
 
-No installation needed! All you need to have to run the game is an internet connection. 
+No installation needed! All you need to have to run the game is the files on your computer.
