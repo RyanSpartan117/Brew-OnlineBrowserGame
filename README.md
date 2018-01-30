@@ -1,6 +1,7 @@
 ## Brew
 
-Brew is a 1v1 cookie dunking game. Grab a friend and get dunking!
+Brew is a 1v1 cookie dunking game. Grab a friend and get dunking!  
+[https://ryanspartan117.github.io/Brew-OnlineBrowserGame/](Brew game)
 
 ## Getting Started
 
